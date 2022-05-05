@@ -1,13 +1,56 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* palette */
+/* 
+main: steel-teal: #668586ff;
+secondary: cadet-blue: #82aeb1ff;
+contrast: eggplant: #704c5eff;
+contrast2: maximum-blue-purple: #a7acd9ff;
+base: tuscan-red: #7d4f50ff; 
+*/
+
+/* typography */
+/* 
+main: font-family: 'Arvo', serif;
+title-thick: font-family: 'Montserrat', sans-serif; font-weight: 800;
+title-thin: font-family: 'Montserrat', sans-serif;  font-weight: 200;
+*/
+
+
+.hidden {
+  display: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.home-page {
+  color: #fff;
+  height: 5000px;
+  background-image: url('../public/cocktails.jpg');
+  background-color: #000;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+/* bootstrap overrides */
+body {
+  font-family: 'Arvo', serif !important;
+}
+
+.bg-primary {
+  background-color: #668586ff !important;
+}
+
+/* start nav */
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif !important; 
+  font-weight: 800 !important;
+  font-size: 30px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+  color: rgb(211, 215, 250) !important;
+}
+/* end nav */
