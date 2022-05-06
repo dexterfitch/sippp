@@ -8,7 +8,7 @@ function Form() {
 
     // Watch keeps track of input AS it's being inputted
     // Example: 
-    console.log("watch: ", watch("glass"));
+    console.log(watch("glass"));
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
