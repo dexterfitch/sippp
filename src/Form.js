@@ -7,7 +7,8 @@ function Form() {
     const [cocktail, setCocktail] = useState({});
 
     // Watch keeps track of input AS it's being inputted
-    // Example: console.log("watch: ", watch("glass"));
+    // Example: 
+    console.log("watch: ", watch("glass"));
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
