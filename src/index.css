@@ -24,7 +24,6 @@ title-thin: font-family: 'Montserrat', sans-serif;  font-weight: 200;
 
 .home-page {
   color: #fff;
-  height: 5000px;
   background-image: url('../public/cocktails.jpg');
   background-color: #000;
   background-position: center;
@@ -36,6 +35,7 @@ title-thin: font-family: 'Montserrat', sans-serif;  font-weight: 200;
 .form-card {
   border-radius: 50px;
   padding: 30px;
+  margin-top: 30px
 }
 
 .cocktail-thumb {
@@ -46,6 +46,7 @@ title-thin: font-family: 'Montserrat', sans-serif;  font-weight: 200;
 /* bootstrap overrides */
 body {
   font-family: 'Arvo', serif !important;
+  overflow-x: hidden;
 }
 
 .container-fluid { padding: 0 !important; }
