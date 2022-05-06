@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
+import Search from "./Search";
 
-function Nav() {
+function Nav({ cocktails, setCocktails }) {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -18,10 +19,7 @@ function Nav() {
                         <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="random">Random</NavLink>
                     </li>
                 </ul>
-                {/* <form className="d-flex">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button className="btn btn-outline-success" type="submit">Search</button>
-                </form> */}
+                <Search cocktails={cocktails} setCocktails={setCocktails} />
                 </div>
             </div>
         </nav>

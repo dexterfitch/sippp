@@ -1,9 +1,11 @@
 import Form from "./Form";
+import Cocktails from "./Cocktails";
 
-function Home() {
+function Home({cocktails}) {
+
     return (
         <div className="home-page">
-            <p>This is the Home Page!</p>
+            <Cocktails drinks={cocktails} />
             <Form />
         </div>
     )

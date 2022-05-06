@@ -1,10 +1,10 @@
 /* palette */
 /* 
-main: steel-teal: #668586ff;
+primary: steel-teal: #668586ff;
 secondary: cadet-blue: #82aeb1ff;
-contrast: eggplant: #704c5eff;
-contrast2: maximum-blue-purple: #a7acd9ff;
-base: tuscan-red: #7d4f50ff; 
+info: eggplant: #704c5eff;
+warning: maximum-blue-purple: #a7acd9ff;
+danger: tuscan-red: #7d4f50ff; 
 */
 
 /* typography */
@@ -18,6 +18,9 @@ title-thin: font-family: 'Montserrat', sans-serif;  font-weight: 200;
 .hidden {
   display: none;
 }
+.semi-opaque {
+  background-color: rgba(0, 0, 0, 0.65);
+}
 
 .home-page {
   color: #fff;
@@ -30,12 +33,28 @@ title-thin: font-family: 'Montserrat', sans-serif;  font-weight: 200;
   background-attachment: fixed;
 }
 
+.form-card {
+  border-radius: 50px;
+  padding: 30px;
+}
+
+.cocktail-thumb {
+  border-radius: 50px;
+  max-height: 200px;
+}
+
 /* bootstrap overrides */
 body {
   font-family: 'Arvo', serif !important;
 }
 
+.container-fluid { padding: 0 !important; }
+
 .bg-primary {
+  background-color: #668586ff !important;
+}
+
+.btn-primary {
   background-color: #668586ff !important;
 }
 

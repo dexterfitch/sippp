@@ -14,14 +14,20 @@ function Cocktail({ drink }) {
 
     return (
         <div>
-            <h3><b>Name:</b> {drink.strDrink} <i>({drink.strAlcoholic})</i></h3>
-            <h4><b>Category:</b> {drink.strCategory}</h4>
-            <p><b>Glass:</b> {drink.strGlass}</p>
-            <p><b>Instructions:</b> {drink.strInstructions}</p>
-            <p><b>Ingredients:</b></p>
-            <ul>
-                {parseIngredients()}
-            </ul>
+            {drink.strDrinkThumb ? <img className="cocktail-thumb" src={drink.strDrinkThumb} /> : null }
+            <h3><b>Name:</b> {drink.strDrink} <span><i>{drink.strAlcoholic ? "-- " + drink.strAlcoholic : null}</i></span></h3>
+            <h4>{drink.strCategory ? <b>Category:</b> : null } {drink.strCategory}</h4>
+            <p>{drink.strGlass ? <b>Glass:</b> : null} {drink.strGlass}</p>
+            <p>{drink.strInstructions ? <b>Instructions:</b> : null} {drink.strInstructions}</p>
+            <p>{drink.strIngredient1 ? <b>Ingredients:</b> : null}</p>
+            {
+                drink.strIngredient1 ? 
+                    <ul>
+                        {parseIngredients()}
+                    </ul>
+                :
+                null
+            }
 
         </div>
     );
