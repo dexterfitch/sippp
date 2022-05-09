@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Cocktail from "./Cocktail";
 import Alert from "./Alert";
+import 'animate.css';
 
 
 function Random({ errors, setErrors }) {
@@ -32,10 +33,39 @@ function Random({ errors, setErrors }) {
         );
     }, []);
 
+    function flipImg(event) {
+        event.target.className = "animate__animated animate__flipInY";
+        if (event.target.src.includes("reverse")) {
+            event.target.src = process.env.PUBLIC_URL + "cocktails_sign.png";
+            setTimeout(() => {event.target.className = ""}, 1000);
+        } else {
+            event.target.src = process.env.PUBLIC_URL + "cocktails_sign_reverse.png";
+            setTimeout(() => {event.target.className = ""}, 1000);
+        }
+    }
+
+    function flipCard(event) {
+        if (event.target.className.includes("front")) {
+            event.target.className = "card back animate__animated animate__flipInY";
+            event.target.innerHTML = "おはよう";
+            setTimeout(() => {event.target.className = "card back"}, 1000);
+        } else {
+            event.target.className = "card front animate__animated animate__flipInY";
+            event.target.innerHTML = "Good Morning";
+            setTimeout(() => {event.target.className = "card front"}, 1000);
+        }
+    }
+
     return (
         <>
             <div className={showMessages ? "messages" : "messages hidden"}>
                 <Alert messages={errors} setShowMessages={setShowMessages} /> 
+            </div>
+            <img onClick={(event) => flipImg(event)} src={process.env.PUBLIC_URL + "cocktails_sign.png"} />
+            <div onClick={(event) => flipCard(event)} className="card front">
+                <div className="card-body">
+                    おはよう
+                </div>
             </div>
             <Cocktail drink={cocktail} />
         </>

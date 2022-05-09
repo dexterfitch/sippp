@@ -21,6 +21,7 @@ title-thin: font-family: 'Montserrat', sans-serif;  font-weight: 200;
 .semi-opaque {
   background-color: rgba(0, 0, 0, 0.65);
 }
+.set-inline-block { display: inline-block; }
 
 .home-page {
   color: #fff;
@@ -40,7 +41,6 @@ title-thin: font-family: 'Montserrat', sans-serif;  font-weight: 200;
 
 .cocktail-thumb {
   border-radius: 50px;
-  max-height: 200px;
 }
 
 /* bootstrap overrides */
@@ -53,6 +53,13 @@ body {
 
 .bg-primary {
   background-color: #668586ff !important;
+}
+
+.card { 
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .btn-primary {
