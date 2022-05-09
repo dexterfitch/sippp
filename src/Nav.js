@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Search from "./Search";
 
-function Nav({ cocktails, setCocktails }) {
+function Nav({ cocktails, setCocktails, randomClicked, setRandomClicked }) {
 
     return (
         <nav className="px-5 navbar navbar-expand-lg navbar-dark bg-primary">
@@ -16,7 +16,7 @@ function Nav({ cocktails, setCocktails }) {
                         <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="/">Home</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="random">Random</NavLink>
+                        <NavLink onClick={() => setRandomClicked(!randomClicked)} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to="random">Random</NavLink>
                     </li>
                 </ul>
                 <Search cocktails={cocktails} setCocktails={setCocktails} />

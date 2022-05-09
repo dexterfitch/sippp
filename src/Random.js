@@ -4,7 +4,7 @@ import Alert from "./Alert";
 import 'animate.css';
 
 
-function Random({ errors, setErrors }) {
+function Random({ errors, setErrors, randomClicked }) {
     const [cocktail, setCocktail] = useState("");
     const [showMessages, setShowMessages] = useState(false);
 
@@ -31,7 +31,7 @@ function Random({ errors, setErrors }) {
             setShowMessages(true);
         }
         );
-    }, []);
+    }, [randomClicked]);
 
     function flipImg(event) {
         event.target.className = "animate__animated animate__flipInY";
