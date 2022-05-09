@@ -4,7 +4,7 @@ function Cocktail({ drink }) {
         let ingredients = [];
 
         for(let i = 1; i < 15; i++) {
-            if (drink["strIngredient" + i] !== null) {
+            if (drink["strIngredient" + i] !== null && drink["strIngredient" + i] !== "") {
                 ingredients.push(<li key={drink.idDrink}>{drink["strMeasure" + i] ? drink["strMeasure" + i] + ":" : null} {drink["strIngredient" + i]}</li>);
             }
         }

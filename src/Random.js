@@ -58,6 +58,7 @@ function Random({ errors, setErrors }) {
 
     return (
         <>
+            <Cocktail drink={cocktail} />
             <div className={showMessages ? "messages" : "messages hidden"}>
                 <Alert messages={errors} setShowMessages={setShowMessages} /> 
             </div>
@@ -67,7 +68,6 @@ function Random({ errors, setErrors }) {
                     おはよう
                 </div>
             </div>
-            <Cocktail drink={cocktail} />
         </>
     );
 }
