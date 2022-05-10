@@ -10,14 +10,16 @@ function Random({ setError, randomClicked }) {
         .then(response => {
             if (response.ok) {
                 return response.json()
+            } else {
+                setError("Error " + response.status + ": Cannot access this data.");
             }
-            setError("Error " + response.status + ": Cannot access this data.");
         })
         .then(data => {
             if (data.drinks.length > 0) {
                 setCocktail(data.drinks[0]);
+            } else {
+                setError("No drinks available at this time. Bar's closed.");
             }
-            setError("No drinks available at this time. Bar's closed.");
         })
         .catch(errors => console.log(errors));
     }, [randomClicked]);
