@@ -45,6 +45,7 @@ function Random({ errors, setErrors, randomClicked }) {
     }
 
     function flipCard(event) {
+        console.log(event.target);
         if (event.target.className.includes("front")) {
             event.target.className = "card back animate__animated animate__flipInY";
             event.target.innerHTML = "おはよう";
@@ -63,10 +64,8 @@ function Random({ errors, setErrors, randomClicked }) {
                 <Alert messages={errors} setShowMessages={setShowMessages} /> 
             </div>
             <img onClick={(event) => flipImg(event)} src={process.env.PUBLIC_URL + "cocktails_sign.png"} />
-            <div onClick={(event) => flipCard(event)} className="card front">
-                <div className="card-body">
+            <div onClick={(event) => flipCard(event)} className="card">
                     おはよう
-                </div>
             </div>
         </>
     );
