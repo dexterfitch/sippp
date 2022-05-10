@@ -1,17 +1,5 @@
 function Cocktail({ drink }) {
 
-    function parseIngredients() {
-        let ingredients = [];
-
-        for(let i = 1; i < 15; i++) {
-            if (drink["strIngredient" + i] !== null && drink["strIngredient" + i] !== "") {
-                ingredients.push(<li key={drink.idDrink}>{drink["strMeasure" + i] ? drink["strMeasure" + i] + ":" : null} {drink["strIngredient" + i]}</li>);
-            }
-        }
-
-        return ingredients;
-    }
-
     return (
         <div className="container mt-5">
             <div className="row">
@@ -36,7 +24,21 @@ function Cocktail({ drink }) {
                     {
                         drink.strIngredient1 ? 
                             <ul>
-                                {parseIngredients()}
+                                {drink["strMeasure1"] != null && drink["strMeasure1"] != "" ? <li>{drink["strMeasure1"] + ": " + drink["strIngredient1"]}</li> : null }
+                                {drink["strMeasure2"] != null && drink["strMeasure2"] != "" ? <li>{drink["strMeasure2"] + ": " + drink["strIngredient2"]}</li> : null }
+                                {drink["strMeasure3"] != null && drink["strMeasure3"] != "" ? <li>{drink["strMeasure3"] + ": " + drink["strIngredient3"]}</li> : null }
+                                {drink["strMeasure4"] != null && drink["strMeasure4"] != "" ? <li>{drink["strMeasure4"] + ": " + drink["strIngredient4"]}</li> : null }
+                                {drink["strMeasure5"] != null && drink["strMeasure5"] != "" ? <li>{drink["strMeasure5"] + ": " + drink["strIngredient5"]}</li> : null }
+                                {drink["strMeasure6"] != null && drink["strMeasure6"] != "" ? <li>{drink["strMeasure6"] + ": " + drink["strIngredient6"]}</li> : null }
+                                {drink["strMeasure7"] != null && drink["strMeasure7"] != "" ? <li>{drink["strMeasure7"] + ": " + drink["strIngredient7"]}</li> : null }
+                                {drink["strMeasure8"] != null && drink["strMeasure8"] != "" ? <li>{drink["strMeasure8"] + ": " + drink["strIngredient8"]}</li> : null }
+                                {drink["strMeasure9"] != null && drink["strMeasure9"] != "" ? <li>{drink["strMeasure9"] + ": " + drink["strIngredient9"]}</li> : null }
+                                {drink["strMeasure10"] != null && drink["strMeasure10"] != "" ? <li>{drink["strMeasure10"] + ": " + drink["strIngredient10"]}</li> : null }
+                                {drink["strMeasure11"] != null && drink["strMeasure11"] != "" ? <li>{drink["strMeasure11"] + ": " + drink["strIngredient11"]}</li> : null }
+                                {drink["strMeasure12"] != null && drink["strMeasure12"] != "" ? <li>{drink["strMeasure12"] + ": " + drink["strIngredient12"]}</li> : null }
+                                {drink["strMeasure13"] != null && drink["strMeasure13"] != "" ? <li>{drink["strMeasure13"] + ": " + drink["strIngredient13"]}</li> : null }
+                                {drink["strMeasure14"] != null && drink["strMeasure14"] != "" ? <li>{drink["strMeasure14"] + ": " + drink["strIngredient14"]}</li> : null }
+                                {drink["strMeasure15"] != null && drink["strMeasure15"] != "" ? <li>{drink["strMeasure15"] + ": " + drink["strIngredient15"]}</li> : null }
                             </ul>
                         :
                         null

@@ -5,7 +5,7 @@ function Alert({ messages, setShowMessages }) {
     }
 
     return (
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <div className="alert alert-warning alert-dismissible fade show" role="alert">
             <ul>
                 {parseMessages()}
             </ul>
