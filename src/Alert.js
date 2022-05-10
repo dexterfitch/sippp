@@ -1,15 +1,11 @@
-function Alert({ messages, setShowMessages }) {
-
-    function parseMessages() {
-        return messages.map((message, index) => <li key={index}>{message}</li>);
-    }
+function Alert({ error, setError }) {
 
     return (
         <div className="alert alert-warning alert-dismissible fade show" role="alert">
             <ul>
-                {parseMessages()}
+            <li>{error}</li>
             </ul>
-            <button onClick={() => setShowMessages(false)} type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <button onClick={() => setError("")} type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     )
 }
